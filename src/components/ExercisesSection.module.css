@@ -1,0 +1,158 @@
+.section {
+  padding: 72px 64px 0;
+}
+
+.mashqList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mashq {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.mashqHead {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.mashqHead:hover {
+  background: var(--bg2);
+}
+
+.mashqNum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--bg3);
+  padding: 24px 0;
+}
+
+.mashqTitleWrap {
+  padding: 22px 28px;
+}
+
+.mashqTitle {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.mashqTopic {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.mtDep   { color: var(--blue); }
+.mtClean { color: var(--red); }
+.mtFetch { color: var(--green); }
+.mtAll   { color: var(--amber); }
+
+.mashqBadge {
+  margin: auto 24px auto 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 5px 12px;
+  border-radius: 2px;
+  height: fit-content;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.mbReq {
+  background: rgba(20, 18, 16, 0.05);
+  border: 1px solid var(--border);
+  color: var(--ink2);
+}
+
+.mbBonus {
+  background: rgba(107, 53, 201, 0.07);
+  border: 1px solid rgba(107, 53, 201, 0.25);
+  color: #7c3aed;
+}
+
+.mashqBody {
+  padding: 0 28px 28px 28px;
+  border-top: 1px solid var(--border);
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.mashqDesc {
+  font-size: 14px;
+  color: var(--ink2);
+  line-height: 1.7;
+  margin: 20px 0 16px;
+}
+
+.checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.checklist li {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--ink2);
+  align-items: flex-start;
+}
+
+.checklist li::before {
+  content: '□';
+  font-size: 15px;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.hintBox {
+  margin-top: 16px;
+  background: var(--bg2);
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+  border-left: 3px solid var(--blue);
+  line-height: 1.6;
+}
+
+.hintBox strong {
+  color: var(--ink2);
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 48px 24px 0;
+  }
+
+  .mashqHead {
+    grid-template-columns: 48px 1fr auto;
+  }
+
+  .mashqTitleWrap {
+    padding: 16px 16px;
+  }
+
+  .mashqBadge {
+    margin-right: 12px;
+  }
+}

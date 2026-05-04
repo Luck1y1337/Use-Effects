@@ -1,0 +1,36 @@
+.secLabel {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.secLabel span {
+  white-space: nowrap;
+}
+
+.secLabel::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.secTitle {
+  font-family: var(--serif);
+  font-size: 44px;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.secSub {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 36px;
+}

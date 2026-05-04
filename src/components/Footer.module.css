@@ -1,0 +1,22 @@
+.footer {
+  margin: 80px 64px 0;
+  padding: 28px 0 48px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer span {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .footer {
+    margin: 48px 24px 0;
+  }
+}

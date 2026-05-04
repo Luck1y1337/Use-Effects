@@ -1,0 +1,95 @@
+.section {
+  padding: 72px 64px 0;
+}
+
+.theoryStack {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 28px;
+}
+
+.theoryRow {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  background: #fff;
+}
+
+.theoryRow + .theoryRow {
+  border-top: 1px solid var(--border);
+}
+
+.theoryLeft {
+  padding: 28px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.theoryIcon {
+  font-size: 22px;
+}
+
+.theoryName {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.theoryNameDep   { color: var(--blue); }
+.theoryNameClean { color: var(--red); }
+.theoryNameFetch { color: var(--green); }
+
+.theoryTag {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.theoryRight {
+  padding: 28px 32px;
+}
+
+.theoryRight p {
+  font-size: 14px;
+  color: var(--ink2);
+  line-height: 1.7;
+}
+
+.theoryRight p + p {
+  margin-top: 10px;
+}
+
+.theoryRight em {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 48px 24px 0;
+  }
+
+  .theoryRow {
+    grid-template-columns: 1fr;
+  }
+
+  .theoryLeft {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  .theoryRight {
+    padding: 16px 20px;
+  }
+}
